@@ -1,0 +1,29 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug against LLDB",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/target/debug/${fileBasenameNoExtension}.exe",
+            "args": [],
+            "cwd": "${workspaceFolder}/Rust",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Debug against MSVC",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/target/debug/${fileBasenameNoExtension}.exe",
+            // "preLaunchTask": "rust: cargo build",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/Rust",
+            "environment": [],
+            "console": "integratedTerminal"
+        }   
+    ]
+}
